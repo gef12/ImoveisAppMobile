@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { StatusBar, AsyncStorage } from 'react-native';
+import { StatusBar } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { StackActions, NavigationActions } from 'react-navigation';
 
 import api from '../../services/api';
@@ -43,7 +44,7 @@ export default class SignIn extends Component {
         this.setState({ password });
     };
     
-    //navegar para a tela de cadastro, ela irá usar o método navigate que está disponível nas props do componente graças ao React Navigation
+    //navegar  a para a tela de cadastro, ela irá usar o método navigate que está disponível nas props do componente graças ao React Navigation
     handleCreateAccountPress = () => {
         this.props.navigation.navigate('SignUp');
     };
